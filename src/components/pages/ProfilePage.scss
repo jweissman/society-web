@@ -1,0 +1,42 @@
+@import "../../brand";
+.Friends--list-item {
+  cursor: pointer;
+  text-align: left;
+  &:hover {
+    background-color: $gallery;
+  }
+}
+$bubble-size: 180px;
+.Page-main {
+  display: flex;
+  align-items: center;
+  .Profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: $major-fourth;
+    .UserOverlay {
+      > * {
+        background-color: transparentize($color: white, $amount: 0.15);
+        overflow: wrap;
+      }
+      .header {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        .User-Bubble {
+          width: $bubble-size;
+          height: $bubble-size;
+          border-radius: $bubble-size/2;
+          margin: 20px;
+        }
+      }
+    }
+  }
+  .Profile-main {
+    width: 100%;
+    background: $gallery;
+    display: flex;
+  }
+}

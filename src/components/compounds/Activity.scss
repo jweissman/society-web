@@ -1,0 +1,35 @@
+@import "../../brand";
+$bubble-size: 32px;
+.Activity {
+  .Activity-header {
+      display: flex;
+      justify-content: space-between;
+    .Activity-author {
+      display: flex;
+      align-items: center;
+      .User-Bubble {
+        display: inline-block;
+        max-height: $bubble-size;
+        max-width: $bubble-size;
+        min-height: $bubble-size;
+        min-width: $bubble-size;
+        border-radius: $bubble-size/2;
+        margin-right: $minor-first;
+      }
+      > * {
+        margin-right: $minor-first;
+      }
+    }
+
+    .Activity-actions {
+        display: flex;
+        .Activity-action {
+            display: inline-block !important;
+            margin-right: $minor-second;
+            display: flex;
+            flex-direction: row;
+            i { padding: 4px; }
+        }
+    }
+  }
+}

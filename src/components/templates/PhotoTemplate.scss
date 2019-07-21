@@ -1,0 +1,28 @@
+@import '../../brand';
+
+.Page {
+  background: darken($iron, 13%);
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.App-main {
+  display: flex;
+  flex-direction: row;
+  font-family: $body-font-stack;
+  margin: $minor-second;
+  >* { padding: $minor-first; }
+}
+
+.Page-main {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    .Page-mainGroup {
+      width: 100%;
+    }
+}

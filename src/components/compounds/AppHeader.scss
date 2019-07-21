@@ -1,0 +1,33 @@
+@import '../../brand';
+
+$bubble-size: 18px;
+.App-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  color: $catskills;
+  background-color: $header-bg;
+  font-family: $header-font-stack;
+  font-size: 12pt;
+  padding: $minor-first;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  margin: 0;
+  .App-user {
+    padding: 5px;
+    font-family: $body-font-stack;
+    // border: 1px solid $alto;
+    background: transparentize(white, 0.9);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  .User-Bubble {
+      width: $bubble-size;
+      height: $bubble-size;
+      border-radius: $bubble-size/2;
+      margin: 2px;
+  }
+}
+}

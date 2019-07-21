@@ -1,0 +1,41 @@
+/// units
+$minor-unit: 0.5rem;
+$major-unit: 4rem;
+
+// minor scale
+$minor-first:  $minor-unit * 1; 
+$minor-second: $minor-unit * 2; 
+$minor-third:  $minor-unit * 3; 
+$minor-fourth: $minor-unit * 4; 
+$minor-fifth: $minor-unit * 5; 
+
+// major scale
+$major-first:  $major-unit * 1; 
+$major-second: $major-unit * 2; 
+$major-third:  $major-unit * 3; 
+$major-fourth: $major-unit * 4; 
+$major-fifth: $major-unit * 5; 
+
+
+/// colors
+$gallery: #efefef;
+$catskills: #eef6f7;
+$alto: #dbdbdb;
+$iron: #d4d7d9;
+$shark: #25272c;
+$astral: #282c34;
+$outer-space: #2d383a;
+
+$brand-primary: $astral;
+
+$header-bg: $brand-primary;
+
+
+/// typography
+@import url('https://fonts.googleapis.com/css?family=Oswald|Montserrat&display=swap');
+
+$header-font-stack: "Oswald"; // Helvetica, sans-serif;
+// $header-font-size: 10px;
+
+$body-font-stack: "Montserrat"; // Helvetica, sans-serif;
+// $body-font-size: 8px;
