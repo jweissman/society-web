@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/society-web/static/css/main.5f54a686.chunk.css",
-    "main.js": "/society-web/static/js/main.982fcd37.chunk.js",
-    "main.js.map": "/society-web/static/js/main.982fcd37.chunk.js.map",
+    "main.css": "/society-web/static/css/main.aae428d8.chunk.css",
+    "main.js": "/society-web/static/js/main.2cde1c17.chunk.js",
+    "main.js.map": "/society-web/static/js/main.2cde1c17.chunk.js.map",
     "runtime~main.js": "/society-web/static/js/runtime~main.c54cb402.js",
     "runtime~main.js.map": "/society-web/static/js/runtime~main.c54cb402.js.map",
-    "static/js/2.179f71cb.chunk.js": "/society-web/static/js/2.179f71cb.chunk.js",
-    "static/js/2.179f71cb.chunk.js.map": "/society-web/static/js/2.179f71cb.chunk.js.map",
+    "static/js/2.f66eebb7.chunk.js": "/society-web/static/js/2.f66eebb7.chunk.js",
+    "static/js/2.f66eebb7.chunk.js.map": "/society-web/static/js/2.f66eebb7.chunk.js.map",
     "index.html": "/society-web/index.html",
-    "precache-manifest.2fc6eb61b603aef7e441d93a44c45c5c.js": "/society-web/precache-manifest.2fc6eb61b603aef7e441d93a44c45c5c.js",
+    "precache-manifest.c33615e2ac8959ff70c008a48c663fd2.js": "/society-web/precache-manifest.c33615e2ac8959ff70c008a48c663fd2.js",
     "service-worker.js": "/society-web/service-worker.js",
-    "static/css/main.5f54a686.chunk.css.map": "/society-web/static/css/main.5f54a686.chunk.css.map"
+    "static/css/main.aae428d8.chunk.css.map": "/society-web/static/css/main.aae428d8.chunk.css.map"
   }
 }
