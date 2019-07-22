@@ -22,7 +22,12 @@ class HumanDatabase {
         console.log("THAW")
         let humansJson: string | null = localStorage.getItem('humans')
         if (humansJson) {
-            this.humans = JSON.parse(humansJson)
+            this.humans = JSON.parse(humansJson, (k: string, v: any) => {
+                if (k === 'createdAt') {
+                    return new Date(v);
+                }
+                return v;
+            })
             console.log("THAWED ---> ", { humans: this.humans })
             return true
         }
@@ -87,6 +92,11 @@ export class HumanService {
             console.log("PROGRESS", p)
             progress(p)
         })
+        for (let i=0; i<10; i++) {
+            Object.values(pool).forEach((human: Human) => {
+                human.activities.push(human.genEvent())
+            })
+        }
         this.db.freeze()
     }
 }

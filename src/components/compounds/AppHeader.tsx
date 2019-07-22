@@ -1,50 +1,27 @@
 import React from 'react';
-import { Dropdown, Menu } from "semantic-ui-react";
+import { Menu } from "semantic-ui-react";
 import './AppHeader.scss';
 import { UserBubble } from '../atoms/UserBubble';
-import HumanService from '../../services/HumanService';
-import Human from '../../values/Human';
+import Masquerade from '../atoms/Masquerade';
 
-interface MasqueradeProps { onChangeUser: Function, onVisitHome: Function, userName: string }
-const Masquerade: React.FC<MasqueradeProps> = (props: MasqueradeProps) => <Dropdown
-    button
-    size='small'
-    className='icon'
-    floating
-    labeled
-    icon='user circle'
-    text={props.userName}
-    onChange={async (_e, { value }) => {
-        // @ts-ignore
-        let id: number = value
-        await props.onChangeUser(HumanService.lookup(id))
-        props.onVisitHome()
-    }}
-    search
-    header="Let the Masquerade begin!"
-    style={{ width: '258px' }}
-    options={HumanService.all().map((human: Human) => {
-        return {
-            key: human.id,
-            text: human.name,
-            value: human.id,
-            image: { avatar: true, src: human.photoUrl }
-        }})}
-    />
 
 interface Props {
     userName: string
     userPhotoUrl: string
     onChangeUser: Function
     onVisitHome: Function
+    onVisitProfile: Function
 }
 const AppHeader: React.FC<Props> = ({
     userName,
     userPhotoUrl,
     onVisitHome,
+    onVisitProfile,
     onChangeUser,
 }) => <Menu className='App-header'>
-    <Menu.Item name='society' className='App-name'></Menu.Item>
+        <Menu.Item header>Society</Menu.Item>
+        <Menu.Item name='Home' link onClick={(e) => onVisitHome()}></Menu.Item>
+        <Menu.Item name='Profile' link onClick={(e) => onVisitProfile()}></Menu.Item>
         <Menu.Item>
             <Masquerade
                 userName={userName}

@@ -6,11 +6,16 @@
     background-color: $gallery;
   }
 }
+
 $bubble-size: 180px;
 .Page-main {
-  display: flex;
-  align-items: center;
-  .Profile-header {
+  text-align: center;
+  width: 90vw;
+  margin: 0 auto;
+  // display: flex;
+  // align-items: center;
+  // background-color: $alto;
+  .Hero-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,9 +39,9 @@ $bubble-size: 180px;
       }
     }
   }
-  .Profile-main {
-    width: 100%;
-    background: $gallery;
-    display: flex;
-  }
+  // .Profile-main {
+  //   width: 100%;
+  //   background: $astral;
+  //   display: flex;
+  // }
 }

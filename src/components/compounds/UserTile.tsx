@@ -1,10 +1,11 @@
 import React from 'react';
 import Human from "../../values/Human";
-import { Segment, Header, Icon, SegmentGroup } from "semantic-ui-react";
+import { Segment, Header, Icon, SegmentGroup, Container } from "semantic-ui-react";
 import { UserBubble } from "../atoms/UserBubble";
+import './UserTile.scss';
 
 interface Props { human: Human, lookupHuman: Function, changeHuman: Function }
-const UserTile: React.FC<Props> = ({ human, lookupHuman, changeHuman }) => <Segment className='User-Tile' color={human.favoriteColor}>
+const UserTile: React.FC<Props> = ({ human, lookupHuman, changeHuman }) => <Container className='User-Tile' color={human.favoriteColor}>
     {human.photoUrl && <UserBubble photoUrl={human.photoUrl} />}
     {/* <div className='User-Bubble' style={{
                     background: `center / 150% url(${human.photoUrl})`,
@@ -38,5 +39,5 @@ const UserTile: React.FC<Props> = ({ human, lookupHuman, changeHuman }) => <Segm
             })}
         </SegmentGroup>
     </Segment>
-</Segment>
+</Container>
 export default UserTile;

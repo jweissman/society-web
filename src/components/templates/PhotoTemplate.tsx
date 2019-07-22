@@ -14,6 +14,7 @@ interface Props {
     doTemplateContent?: boolean
     onChangeUser: Function
     onVisitHome: Function
+    onVisitProfile: Function
 }
 
 class PhotoTemplate extends React.Component<Props> {
@@ -35,6 +36,7 @@ class PhotoTemplate extends React.Component<Props> {
                 userPhotoUrl={this.props.userPhotoUrl}
                 onChangeUser={this.props.onChangeUser}
                 onVisitHome={this.props.onVisitHome}
+                onVisitProfile={this.props.onVisitProfile}
             />
             <main className='App-main'>
                 <Responsive minWidth={992}>

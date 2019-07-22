@@ -13,16 +13,19 @@ interface Props {
     changeUser: (u: Human) => void
     changeHuman: (h: Human) => void
     lookupHuman: (id: number) => Human
+    createActivity: (h: Human, d: string) => void
     onVisitHome: Function
+    onVisitProfile: Function
 }
 
 export default class ProfilePage extends React.Component<Props> {
     render() {
-        let { human, user, changeHuman, lookupHuman } = this.props;
+        let { human, user, changeHuman, lookupHuman, createActivity } = this.props;
         let me = user === human;
         return <PhotoTemplate
             onChangeUser={this.props.changeUser}
             onVisitHome={this.props.onVisitHome}
+            onVisitProfile={this.props.onVisitProfile}
             userName={user.name}
 
             userPhotoUrl={user.photoUrl || faker.image.people()}
@@ -88,9 +91,14 @@ export default class ProfilePage extends React.Component<Props> {
             }
         >
             <ProfileBody
+                me={me}
                 human={human}
                 changeHuman={changeHuman}
                 lookupHuman={lookupHuman}
+                createActivity={(human: Human, desc: string )=>{
+                    console.log("CREATE IT", { human, desc })
+                    createActivity(human, desc)
+                }}
             />
 
         </PhotoTemplate>

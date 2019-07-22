@@ -6,9 +6,9 @@ export default class HeroImage extends React.Component<Props>  {
     render() {
         let { photoUrl } = this.props;
         return <Segment
-            className='Profile-header'
+            className='Hero-header'
             style={{
-                background: `center / 100% url(${photoUrl}) fixed`,
+                background: `center / 100% url(${photoUrl})`,
                 backgroundSize: 'cover'
             }}
         >

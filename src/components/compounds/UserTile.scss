@@ -1,0 +1,32 @@
+@import "../../brand";
+$bubble-size: 204px;
+$small-bubble-size: 32px;
+.User-Tile {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  .User-Bubble {
+    width: $bubble-size;
+    height: $bubble-size;
+    border-radius: $bubble-size/2;
+  }
+  .Friends {
+    width: 100%;
+    background-color: $gallery;
+    .Friends--list-item {
+      display: flex !important;
+      flex-direction: row;
+      align-items: center;
+      .User-Bubble {
+        display: inline-block;
+        width: $small-bubble-size;
+        height: $small-bubble-size;
+        border-radius: $small-bubble-size/2;
+        margin-right: $minor-second;
+      }
+      font-weight: bold;
+      background-color: white;
+    }
+  }
+}
